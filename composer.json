@@ -1,0 +1,56 @@
+{
+    "name": "tightenco/laravel-slack",
+    "description": "A lightweight starter set of things you'll need to use the Slack API",
+    "keywords": [
+        "tightenco",
+        "laravel-slack",
+        "php",
+    ],
+    "homepage": "https://github.com/tightenco/laravel-slack",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jakebathman",
+            "email": "jake.bathman@gmail.com",
+            "homepage": "https://tighten.co",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "phpunit/phpunit": "^9.0",
+        "tightenco/tlint": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tightenco\\LaravelSlack\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tightenco\\LaravelSlack\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tightenco\\LaravelSlack\\LaravelSlackServiceProvider"
+            ],
+            "aliases": {
+                "LaravelSlack": "Tightenco\\LaravelSlack\\LaravelSlackFacade"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
